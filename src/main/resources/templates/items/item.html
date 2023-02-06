@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+  <div>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="col-md-1"></th>
+        <th class="col-md-2">상품명</th>
+        <th class="col-md-2">가격</th>
+        <th class="col-md-2">재고수량</th>
+        <th class="col-md-1"></th>
+        <th class="col-md-1"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="item : ${item}">
+        <td></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.quantity}"></td>
+        <td>
+          <a href="#" th:href="@{/items/{id}/edit(id=${item.id})}" class="btn btn-info" role="button">수정</a>
+        </td>
+        <td>
+          <form th:action="@{/items/list}" th:method="post">
+            <button type="submit" class="btn btn-outline-danger" id="delete-comment-button">삭제</button>
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <input type="hidden" name="id" th:value="${item.id}"/>
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <nav id="pagination" aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a th:href="@{/items/list(page=${item.number - 1})}"
+               th:class="'page-link'+(${item.number} <= 0 ? ' disabled' : '')"
+               th:text="previous">Previous</a>
+          </li>
+
+          <li th:each="pageNumber : ${pagination}" class="page-item">
+            <a th:href="@{/items/list(page=${pageNumber})}"
+               th:class="'page-link' + (${pageNumber}==${item.number} ? ' disabled':'')"
+               th:text="${pageNumber+1}">1</a>
+          </li>
+
+          <li class="page-item">
+            <a th:href="@{/items/list(page=${item.number+1})}"
+               th:class="'page-link' + (${item.number}>=${item.totalPages-1}? ' disabled': '')"
+               th:text="Next">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+
+
+  <div th:replace="fragments/footer :: footer"/>
+</div> <!-- /container -->
+</body>
+</html>
