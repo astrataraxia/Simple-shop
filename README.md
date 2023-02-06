@@ -4,7 +4,7 @@
 <br/><br/>
 
 ### 기술 소개
- <img src="https://img.shields.io/badge/Java17-orange"> <img src="https://img.shields.io/badge/Spring-green"> <img src="https://img.shields.io/badge/Spring-Boot-green"> <img src="https://img.shields.io/badge/Spring-security-green"> <img src="https://img.shields.io/badge/JPA-orange"> <img src="https://img.shields.io/badge/MySQL-blue">
+ <img src="https://img.shields.io/badge/Java17-orange"> <img src="https://img.shields.io/badge/Spring-green"> <img src="https://img.shields.io/badge/Spring-Boot-green"> <img src="https://img.shields.io/badge/Spring-security-green"> <img src="https://img.shields.io/badge/JPA-orange"> <img src="https://img.shields.io/badge/MySQL-blue">  <img src="https://img.shields.io/badge/thymeleaf-biggren"> 
  
 ### 1. 프로젝트 구성 소개
 * <b>홈 화면</b> </br>
@@ -26,9 +26,7 @@
 
 ### 2. 프로젝트의 목적
 
-* <b>배운 기술을 활용해 보자</b>
-
-  
+* 학습하고 익힌것을 활용해보기 위하여 심플한 상품 거래 사이트를 설계하여 만들어 보았다. 이를통해 java와 spring에대한 학습을 더 심도있게 해보았다. 이번 프로젝트를 통하여 Spring에대한 경험이 확실하게 더 늘어난것을 느꼈다. 특히 Spring Legacy로 진행한 이전 프로젝트와 다르게 Spring boot, JPA, Java17등 나름 최신의 버전들을 사용한 개발방법을 사용하며 무엇이 달라졌고, 어떤 식의로 개발의 방향이 바뀌어 왔다는것을 익히면서 프로그래밍에 대한 이해도가 높아졌다.
   
  
 ### 3. 기술을 사용하며 느낀점
@@ -36,10 +34,17 @@
   - spring boot : spring boot를 사용함으로 버전관리, 내장된 Servlet등으로인해 편리하게 관리되며 Library dependency등도 다 관리 해줌으로인해 Spring을 이용해 xml에 설정을 할때보다 훨씬 편리하게 되었다. 여기다 start.spring.io 사이트를 이용하여 쉽게 라이브러리들을 추가해서 프로젝트를 시작 할수 도 있으니 아주 쉽게 실행되는 프로젝트를 만들 수있었다. 다만 부트에 대한 공부가 아직은 좀 부족하므로 더 깊은 공부가 필요하다.
   
 
-### 4.ERD
+### 4. TODO
+ * Admin 페이지 미구현(유저 역할과 Home화면만 구성)
+ * Exception 페이지들 미구현
+ * message.propertise 미구현
+ * Validation을 통한 검증 미구현.(현재 validation 적용이 되지 않음)
+ * 생각나는대로 추가기능 구현 예정
+
+### 5.ERD
 ![poster](/img/boardERD.png)<br/>
 
-<br/><br/>
+
 
 
 
