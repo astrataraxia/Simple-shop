@@ -34,14 +34,7 @@
   - spring boot : spring boot를 사용함으로 버전관리, 내장된 Servlet등으로인해 편리하게 관리되며 Library dependency등도 다 관리 해줌으로인해 Spring을 이용해 xml에 설정을 할때보다 훨씬 편리하게 되었다. 여기다 start.spring.io 사이트를 이용하여 쉽게 라이브러리들을 추가해서 프로젝트를 시작 할수 도 있으니 아주 쉽게 실행되는 프로젝트를 만들 수있었다. 다만 부트에 대한 공부가 아직은 좀 부족하므로 더 깊은 공부가 필요하다.
   
 
-### 4. TODO
- * Admin 페이지 미구현(유저 역할과 Home화면만 구성)
- * Exception 페이지들 미구현
- * message.propertise 미구현
- * Validation을 통한 검증 미구현.(현재 validation 적용이 되지 않음)
- * 생각나는대로 추가기능 구현 예정
-
-### 5.ERD
+### 4.ERD
 ![poster](/img/boardERD.png)<br/>
 
 
